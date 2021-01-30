@@ -1,0 +1,99 @@
+
+<!doctype html>
+<html>
+  <head>
+    <title>File Info</title>
+    <script src="popup.js"></script>
+    <style>
+.wrapper {
+  width: 200px;
+  max-width: 98%;
+  margin: 0 auto;
+}
+#information-section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 150px;
+  overflow: auto;
+}
+#container {
+  clear: both;
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+#fileInputWrapper {
+  display: block;
+  padding: 10px;
+  background-color: #444857;
+  color: #fff;
+  text-align: center;
+  position: relative;
+} 
+
+#fileInput {
+  visibility: hidden;
+  position: absolute;
+}
+
+#container.active {
+  display: block;
+}
+
+#fileInfo {
+  float: left;
+  width: 100%;
+}
+
+#fileInfo p {
+  border: 1px solid #eee;
+  padding: 10px 10px;
+  margin: 0;
+}
+
+#fileInfo p:nth-child(odd) {
+  background: #ccc;
+}
+
+span.center {
+  text-align: center;
+  display: block;
+  padding: 10px 0;
+}
+
+#txtButton {
+  background-color: #444857;
+  border: none;
+  padding: 8px 6px;
+  color:#fff;
+}
+#txtInput {
+  height: 25px
+}
+
+
+    
+    
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <img src="icon.png" width="20" height="20" style="float: left; margin-right: 5px;"/>
+        <h3>FileInfo</h3>
+      </header>
+      <label id="fileInputWrapper">
+      <input type="file" id="fileInput" /> Upload File
+      </label>
+        <span class="center">OR</span>
+        <input type="text" id="txtInput" placeholder="Paste url here"/>
+        <button id="txtButton">Find</button>
+      <div id="information-section">
+        <img src="" id="container"/>
+        <div id="fileInfo"></div>
+      </div>
+    </div> 
+</body>
+</html>
+
